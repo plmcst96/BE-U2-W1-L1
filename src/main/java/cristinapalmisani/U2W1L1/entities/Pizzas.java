@@ -11,8 +11,8 @@ import lombok.Setter;
 @Setter
 
 public class Pizzas {
-    private String pizzaName;
-    private String ingredients;
-    private int calories;
-    private double price;
+    private String pizzaName = "Pizza Margherita";
+    private String ingredients = "tomato, cheese";
+    private int calories = 1104 ;
+    private double price = 4.99;
 }
