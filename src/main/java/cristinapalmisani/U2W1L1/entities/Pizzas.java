@@ -5,14 +5,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
+import java.util.List;
+
 @Getter
 @Setter
+public class Pizzas extends MenuItem {
+    private List<Toppings> toppings;
 
-public class Pizzas {
-    private String pizzaName = "Pizza Margherita";
-    private String ingredients = "tomato, cheese";
-    private int calories = 1104 ;
-    private double price = 4.99;
+    public Pizzas(String name, int calories, double price, List<Toppings> toppings) {
+        super(name, calories, price);
+        this.toppings = toppings;
+    }
+
+  @Override
+    public String toString() {
+        return "Pizza{" +
+                "name='" + getName() + '\'' +
+                ", calories=" + getCalories() +
+                ", price=" + getPrice() +
+                ", toppingList=" + getToppings() +
+                '}';
+    }
 }
