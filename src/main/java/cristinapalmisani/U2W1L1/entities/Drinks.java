@@ -9,10 +9,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-
-public class Pizzas {
-    private String pizzaName;
-    private String ingredients;
+public class Drinks {
+    private String name;
     private int calories;
     private double price;
 }
